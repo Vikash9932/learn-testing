@@ -95,6 +95,7 @@ Includes all relevant units, tests behaviour
 
 - comes with create-react-app
 - `src/setupTests.js` imports it before each test, makes matchers available
+- [Link](https://github.com/testing-library/jest-dom) for custom matchers
 
 ### Jest Watch mode
 
@@ -148,7 +149,8 @@ Includes all relevant units, tests behaviour
 - Testing Library recommends finding elements by accessibility handles [Guide](https://testing-library.com/docs/guide-which-query/)
 - create-react-app's example test uses `getByText` - (non-interactive elements like div, span, p)
   - ok for non-interactive elements
-  - better: `getByRole`
+  - **better:** `getByRole`
+  - e.g. const linkElement = screen.getByRole('link', { name: /learn react/i });
 - Roles documentation [here](https://www.w3.org/TR/wai-aria#role_definitions)
   - some elements have built-in roles: `button`, `a`
 
@@ -222,3 +224,20 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+# THE PLAN
+
+- Start with very simple React
+  - focus on Testing Library syntax
+- First app: not much of an app
+  - changing button color, disabling button with checkbox
+  - introduce: testing interactions that affect DOM, unit testing functions
+- Build up to more complex functionality and tests
+- Second App: design and order an ice-cream sundae
+  - testing more complex user interactions, interactions between components
+  - mocking server responses with Mock Service Worker
+  - testing async functionality
+
+# Lecture code
+
+[Link](https://github.com/bonnie/udemy-TESTING-LIBRARY/tree/master/lecture-code)
