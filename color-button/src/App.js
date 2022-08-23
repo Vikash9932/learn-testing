@@ -20,12 +20,15 @@ function App() {
         disabled={disabled}>
         Change to {color === 'blue' ? 'red' : 'blue'}
       </button>
+
       <input
+        id='disable-button-checkbox'
         type='checkbox'
         defaultChecked={disabled}
         aria-checked={disabled} //For Screen readers
         onChange={() => setDisabled(!disabled)}
       />
+      <label htmlFor='disable-button-checkbox'>Disable button</label>
     </div>
   );
 }
