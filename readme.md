@@ -1,3 +1,34 @@
+#### Types of Tests
+
+- **Unit tests**
+  - Tests one unit of code in isolation
+- **Integration tests**
+  - How multiple units work together
+- **Functional Tests**
+  - Tests a particular function of software
+- **Acceptance/End-to-end (E2E) Tests**
+  - Use actual browser and server (Cypress, Selenium)
+
+**Unit Testing**
+
+Isolated: mock dependencies, test internals
+
+- Very Easy to pinpoint failures
+
+- Further from how users interact with software
+- More likely to break with refactoring
+
+**Functional Testing**
+
+Includes all relevant units, tests behaviour
+
+- Close to how users interact with software
+- Robust tests
+
+- More difficult to debug failing tests
+
+**Advantages of Functional Testing outweigh Unit Testing**
+
 # React Testing Library
 
 - Not just a library, also a philosophy ('opinionated')
@@ -7,6 +38,24 @@
   - Find elements by accessibility markers, not test IDs
 
 - Provides virtual DOM for tests
+
+- React Testing Library helps with
+
+  - rendering components into virtual DOM
+  - searching virtual DOM
+  - Interacting with virtual DOM
+
+- Needs a test runner - `Jest`
+  - Find tests, run them, make assertions
+- Jest
+  - is recommended by Testing Library
+  - comes with create-react-app
+
+### What React Testing Library does
+
+- Creates virtual DOM for testing
+  - and utilities for interacting with DOM
+- Allows testing without a browser
 
 # Jest
 
@@ -27,18 +76,18 @@
   - Jest global, starts the assertion
   - assertion, causes test to succeed or fail
 
-- `expect argument`
+- expect argument
 
   - subject of the assertion
-  - e.g. (linkElement)
+  - e.g. `expect(linkElement)`
 
-- `matcher`
+- matcher
 
   - type of assertion
   - this matcher comes from Jest-DOM
-  - e.g. toBeInTheDocument(), toBe('Hello'), toHaveLength(7), toBeVisible(), toBeChecked()
+  - e.g. `toBeInTheDocument()`, `toBe('Hello')`, `toHaveLength(7)`, `toBeVisible()`, `toBeChecked()`
 
-- `matcher argument`
+- matcher argument
   - refines matcher
   - e.g. ('Hello'), (7)
 
@@ -46,6 +95,62 @@
 
 - comes with create-react-app
 - `src/setupTests.js` imports it before each test, makes matchers available
+
+### Jest Watch mode
+
+- watch for changes in files since last commit
+- only run tests related to these files
+- No changes? No tests
+  - Type `a` to run all tests
+
+### Jest working
+
+- global `test` method has two arguments:
+  - string description
+  - test function
+- Test fails if error is thrown when running function
+  - assertion throws errors when expectation fails which fails the test
+- No error -> tests pass
+  - Empty test passes!
+
+## TDD: Test-Driven Development
+
+- Write tests before writing code
+  - then write code accroding to "spec" set by tests
+- "red-green" testing
+  - Tests fail before code is written
+
+**Steps:**
+
+- Write "shell" function - in the components
+- Write tests
+- Tests fail
+- Write code
+- Tests pass!
+
+**Advantages**
+
+- Makes a huge difference in how it feels to write tests
+  - part of the coding process, not a "chore" to do at the end
+- More efficient
+  - Re-run tests "for free" after changes (regression testing)
+
+## BDD: Behaviour-Driven Development
+
+- Meaning how users actually use the app
+- Testing library encourages testing _behaviour_ over _implementation_
+- involves collaboration between lots of roles
+  - developers, QA, business partners, etc
+- defines process for different groups to interact
+
+## Accessibility and Finding Elements
+
+- Testing Library recommends finding elements by accessibility handles [Guide](https://testing-library.com/docs/guide-which-query/)
+- create-react-app's example test uses `getByText` - (non-interactive elements like div, span, p)
+  - ok for non-interactive elements
+  - better: `getByRole`
+- Roles documentation [here](https://www.w3.org/TR/wai-aria#role_definitions)
+  - some elements have built-in roles: `button`, `a`
 
 # Getting Started with Create React App
 
