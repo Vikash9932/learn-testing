@@ -3,6 +3,7 @@ import './App.css';
 
 function App() {
   const [color, setColor] = useState('red');
+  const [disabled, setDisabled] = useState(false);
 
   const handleClick = () => {
     if (color === 'blue') {
@@ -13,9 +14,18 @@ function App() {
   };
   return (
     <div>
-      <button onClick={handleClick} style={{ backgroundColor: color }}>
+      <button
+        onClick={handleClick}
+        style={{ backgroundColor: color }}
+        disabled={disabled}>
         Change to {color === 'blue' ? 'red' : 'blue'}
       </button>
+      <input
+        type='checkbox'
+        defaultChecked={disabled}
+        aria-checked={disabled} //For Screen readers
+        onChange={() => setDisabled(!disabled)}
+      />
     </div>
   );
 }
