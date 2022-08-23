@@ -1,20 +1,3 @@
-# React Testing Library
-
-- Not just a library, also a philosophy ('opinionated')
-
-  - Test your software the way users actually use it
-    - not internal implementation
-  - Find elements by accessibility markers, not test IDs
-
-- Provides virtual DOM for tests
-
-# Jest
-
-- Test runner that
-  - Finds tests
-  - Runs tests
-  - Determines whether tests pass or fail
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
