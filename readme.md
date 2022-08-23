@@ -15,6 +15,38 @@
   - Runs tests
   - Determines whether tests pass or fail
 
+### render
+
+- Create virtual DOM for argument JSX
+- Access virtual DOM via `screen` global
+
+### expect
+
+- `expect`
+
+  - Jest global, starts the assertion
+  - assertion, causes test to succeed or fail
+
+- `expect argument`
+
+  - subject of the assertion
+  - e.g. (linkElement)
+
+- `matcher`
+
+  - type of assertion
+  - this matcher comes from Jest-DOM
+  - e.g. toBeInTheDocument(), toBe('Hello'), toHaveLength(7), toBeVisible(), toBeChecked()
+
+- `matcher argument`
+  - refines matcher
+  - e.g. ('Hello'), (7)
+
+### jest-dom
+
+- comes with create-react-app
+- `src/setupTests.js` imports it before each test, makes matchers available
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
