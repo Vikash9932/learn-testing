@@ -125,6 +125,7 @@ Includes all relevant units, tests behaviour
 
 ### Jest working
 
+- `describe` method to group tests
 - global `test` method has two arguments:
   - string description
   - test function
