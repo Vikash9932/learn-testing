@@ -29,6 +29,25 @@ Includes all relevant units, tests behaviour
 
 **Advantages of Functional Testing outweigh Unit Testing**
 
+#### Unit Testing Functions
+
+- Functions seperate from components
+  - Used by several components
+  - Complex logic
+- Unit test if
+  - Complex logic difficult to test via functional tests
+  - Too many edge cases
+
+#### When to unit test?
+
+- could be covered by functional tests on button
+- For more complicated functions, unit tests help with:
+  - covering all possible edge cases
+  - determining what caused functional tests to fail
+- Issue with functional tests:
+  - high-level makes them resistant to refactors
+  - high-level makes them difficult to diagnose
+
 # React Testing Library
 
 - Not just a library, also a philosophy ('opinionated')
