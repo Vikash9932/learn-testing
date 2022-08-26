@@ -22,7 +22,7 @@ function App() {
         onClick={handleClick}
         style={{ backgroundColor: disabled ? 'gray' : color }}
         disabled={disabled}>
-        Change to
+        Change to{' '}
         {color === 'MediumVioletRed'
           ? replaceCamelWithSpaces('MidnightBlue')
           : replaceCamelWithSpaces('MediumVioletRed')}
