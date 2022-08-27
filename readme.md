@@ -194,6 +194,14 @@ Includes all relevant units, tests behaviour
 - [eslint-plugin-testing-library](https://github.com/testing-library/eslint-plugin-testing-library)
 - [eslint-plugin-jest-dom](https://github.com/testing-library/eslint-plugin-jest-dom)
 - Preferred rules and plugins [Bonnie](https://github.com/bonnie/bonniedotdev/blob/master/client/.eslintrc.json)
+- ESLint stps to configure
+  - `npm install eslint-plugin-testing-library eslint-plugin-jest-dom`
+  - Remove `eslintConfig` from package.json
+  - Create _.eslintrc.json_ and add standard config
+  - Install eslint extension for vscode
+  - Create _.vscode/settings.json_ and add standard config
+  - Add `.eslintcache` and `.vscode` to _.gitignore_
+  -
 
 # Getting Started with Create React App
 
