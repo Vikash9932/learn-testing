@@ -174,6 +174,27 @@ Includes all relevant units, tests behaviour
 - Roles documentation [here](https://www.w3.org/TR/wai-aria#role_definitions)
   - some elements have built-in roles: `button`, `a`
 
+## ESLint
+
+- Popular linter for JavaScript
+  - Linter: analyzes static text and marks syntax that breaks rules
+    - Linters address format and style
+  - Static: analyzes code as written, not what happes when code is run
+- Linting keeps code style consistent
+  - especially for multi-eng projects
+- Also catches errors in code
+  - using variable before defining
+  - importing from nonexisting files
+
+### ESLint Plugins
+
+- Plug-ins extend ESLint
+- Testing Library and jest-dom ESLint plugins
+  - Enforce best practices
+- [eslint-plugin-testing-library](https://github.com/testing-library/eslint-plugin-testing-library)
+- [eslint-plugin-jest-dom](https://github.com/testing-library/eslint-plugin-jest-dom)
+- Preferred rules and plugins [Bonnie](https://github.com/bonnie/bonniedotdev/blob/master/client/.eslintrc.json)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
