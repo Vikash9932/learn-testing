@@ -70,6 +70,39 @@ Includes all relevant units, tests behaviour
   - is recommended by Testing Library
   - comes with create-react-app
 
+## `screen` Query Methods
+
+**command\[All\]ByQueryType**
+
+command
+
+- `get`: expect element to be in DOM
+- `query`: expect element _not_ to be in DOM
+- `find`: expect element to appear _async_
+
+\[All\]
+
+- (exclude) expect only one match
+- (include) expect more than one match
+
+QueryType
+
+- `Role` (most preferred)
+- `AltText` (images)
+- `Text` (display elements)
+- `Title`
+- `TestId` (least preferred)
+- Form elements
+  - `PlaceholderText`
+  - `LabelText`
+  - `DisplayValue`
+
+Reference:
+
+- [api-queries](https://testing-library.com/docs/dom-testing-library/api-queries)
+- [cheatsheet](https://testing-library.com/docs/dom-testing-library/cheatsheet)
+- [which-query](https://testing-library.com/docs/guide-which-query)
+
 ### What React Testing Library does
 
 - Creates virtual DOM for testing
@@ -201,7 +234,6 @@ Includes all relevant units, tests behaviour
   - Install eslint extension for vscode
   - Create _.vscode/settings.json_ and add standard config
   - Add `.eslintcache` and `.vscode` to _.gitignore_
-  -
 
 # Getting Started with Create React App
 
@@ -290,3 +322,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 # Lecture code
 
 [Link](https://github.com/bonnie/udemy-TESTING-LIBRARY/tree/master/lecture-code)
+[Link](https://github.com/bonnie/udemy-TESTING-LIBRARY/tree/master/sundae-server)
+
+# Important Links
+
+[React Testing Library Cheatsheet](https://testing-library.com/docs/react-testing-library/cheatsheet)
+[Jest DOM](https://github.com/testing-library/jest-dom)
